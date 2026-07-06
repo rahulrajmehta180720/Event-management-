@@ -1,1 +1,99 @@
-<p>hello</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Booking Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Event Booking Website</h1>
+
+    <form id="bookingForm">
+
+        <input type="text" id="fullName"
+        placeholder="Full Name" required>
+
+        <input type="email" id="email"
+        placeholder="Email Address" required>
+
+        <select id="functionType">
+            <option>Wedding</option>
+            <option>Birthday</option>
+            <option>Corporate Event</option>
+            <option>Engagement</option>
+        </select>
+
+        <input type="date"
+        id="bookingDate" required>
+
+        <h3>Select Facilities</h3>
+
+        <label>
+            <input type="checkbox"
+            class="facility"
+            value="5000">
+            Catering (₹5000)
+        </label>
+
+        <label>
+            <input type="checkbox"
+            class="facility"
+            value="3000">
+            Decoration (₹3000)
+        </label>
+
+        <label>
+            <input type="checkbox"
+            class="facility"
+            value="2000">
+            Music (₹2000)
+        </label>
+
+        <label>
+            <input type="checkbox"
+            class="facility"
+            value="1500">
+            Parking (₹1500)
+        </label>
+
+        <h2>Total Amount:
+            ₹<span id="totalAmount">0</span>
+        </h2>
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</div>
+
+<div class="chatbox">
+
+    <div class="chat-header">
+        Support Chat
+    </div>
+
+    <div class="chat-messages"
+    id="chatMessages"></div>
+
+    <div class="chat-input">
+
+        <input type="text"
+        id="chatInput"
+        placeholder="Type Message">
+
+        <button onclick="sendChat()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
